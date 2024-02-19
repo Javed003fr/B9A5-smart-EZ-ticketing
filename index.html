@@ -13,7 +13,7 @@
 
 <body>
     <!-- Navbar Section Start -->
-    <nav class="flex items-center justify-between w-10/12 mx-auto mt-20 h-9">
+    <nav id="nav-bar" class="flex items-center justify-between w-10/12 mx-auto mt-20 h-9">
         <div>
             <h2 class="text-3xl font-bold">EZ-Ticket</h2>
         </div>
@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div>
-            <button class="btn btn-outline outline-2 outline-[#1DD10066] bg-[#1DD1001A] text-lg font-bold ">
+            <button id="bus-btn" onclick="bookingTicket()" class="btn border-2 border-[#1DD10066] bg-[#1DD1001A] text-lg font-bold ">
                 <span class="text-[#1DD100]">Bus</span>
                 <img src="./images/bus-icon.png" alt="">
             </button>
@@ -124,7 +124,7 @@
     <!-- Best Offer Section End -->
 
     <!-- Ticket Section Start -->
-    <section class="bg-[#F7F8F8] rounded-t-3xl mt-20">
+    <section id="ticket-section" class="bg-[#F7F8F8] rounded-t-3xl mt-20">
         <div class="flex justify-center items-center">
             <h2 class="text-4xl font-bold my-8">A.J Paribahan</h2>
         </div>
@@ -143,15 +143,15 @@
                     <div>
                         <button class="btn text-[#1DD100] bg-[#1DD1001A] text-lg font-bold">
                             <img src="./images/seat-green.png" alt="">
-                            <span><span>40</span> Seats left</span>
+                            <div id="total-seats"><span class="seat-left">40</span> Seats left</div>
                         </button>
                     </div>
                 </div>
                 
+                <!-- Buy Ticket -->
                 <div class="bg-[#F7F8F8] p-6 rounded-2xl">
                     <div class="flex justify-between">
                         <p class="text-[#03071299] font-raleway font-semibold">Route</p>
-                        <!-- <span class="divider inline-block h-2 bg-black">.......</span> -->
                         <p class="font-semibold font-raleway">Dhaka-Sylhet</p>
                     </div>
                     <div class="flex flex-col w-full">
@@ -178,8 +178,8 @@
                 </div>
             </div>
 
-
-            <div class="w-3/12 flex justify-center">
+            <!-- bus fair per seat -->
+            <div id="bus-fair" class="w-3/12 flex justify-center">
                 <div class="flex flex-col justify-center items-center space-y-3">
                     <img src="/images/fare.png" alt="">
                     <h2 class="text-4xl font-raleway font-bold"><span>550</span> Taka</h2>
@@ -190,7 +190,7 @@
 
         <!-- Seat Select section -->
 
-        <div class="flex flex-col-2 w-10/12 mx-auto mt-5 bg-white rounded-3xl p-6">
+        <div id="select-seat" class="flex flex-col-2 w-10/12 mx-auto mt-5 bg-white rounded-3xl p-6">
             <div class="flex flex-col w-7/12">
                 <div>
                     <p class="text-2xl font-raleway font-semibold">Select Your Seat</p>
@@ -216,28 +216,30 @@
                         <img src="./images/wheel.png" alt="">
                     </button>
                 </div>
+
+                <!-- Seat Button -->
                 <div class="flex items-center justify-center mt-6">
                     <div class="mr-7">
                         <p>A</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>A1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="A1">A1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>A2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="A2">A2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>A3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="A3">A3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>A4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="A4">A4</span>
                         </button>
                     </div>
                 </div>
@@ -246,23 +248,23 @@
                         <p>B</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>B1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="B1">B1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>B2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="B2">B2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>B3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="B3">B3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>B4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="B4">B4</span>
                         </button>
                     </div>
                 </div>
@@ -271,23 +273,23 @@
                         <p>C</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>C1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="C1">C1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>C2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="C2">C2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>C3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="C3">C3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>C4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="C4">C4</span>
                         </button>
                     </div>
                 </div>
@@ -296,23 +298,23 @@
                         <p>D</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>D1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="D1">D1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>D2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="D2">D2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>D3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="D3">D3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>D4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="D4">D4</span>
                         </button>
                     </div>
                 </div>
@@ -321,23 +323,23 @@
                         <p>E</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>E1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="E1">E1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>E2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="E2">E2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>E3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="E3">E3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>E4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="E4">E4</span>
                         </button>
                     </div>
                 </div>
@@ -346,23 +348,23 @@
                         <p>F</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>F1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="F1">F1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>F2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="F2">F2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>F3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="F3">F3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>F4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="F4">F4</span>
                         </button>
                     </div>
                 </div>
@@ -371,23 +373,23 @@
                         <p>G</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>A1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="G1">G1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>G2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="G2">G2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>G3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="G3">G3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>G4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="G4">G4</span>
                         </button>
                     </div>
                 </div>
@@ -396,28 +398,28 @@
                         <p>H</p>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>H1</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="H1">H1</span>
                         </button>
                     </div>
                     <div class="mr-16">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>H2</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="H2">H2</span>
                         </button>
                     </div>
                     <div class="mr-8">
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>H3</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="H3">H3</span>
                         </button>
                     </div>
                     <div>
-                        <button class="btn w-28 bg-[#0307121A]">
-                            <span>H4</span>
+                        <button class="seat-btn btn w-28 bg-[#0307121A]">
+                            <span class="H4">H4</span>
                         </button>
                     </div>
                 </div>
             </div>
-
+            <!-- Select Seat -->
             <div class="w-5/12 ml-5 font-inter">
                 <div>
                     <p class="text-2xl font-raleway font-semibold">Select your seat</p>
@@ -430,7 +432,7 @@
                     <div class="grid grid-cols-3">
                         <div class="flex items-center gap-1">
                             <p class="text-left">Seat</p>
-                            <div class="badge bg-[#1DD100] text-white">0</div>
+                            <div id="seat-count" class="badge bg-[#1DD100] text-white">0</div>
                         </div>
                         <div>
                             <p class="text-center">Class</p>
@@ -439,9 +441,9 @@
                             <p class="text-right">Price</p>
                         </div>
                         
-
                         <div>
-
+                            <ul id="selected-items" class="selected-items">
+                            </ul>
                         </div>
                         
                     </div>
@@ -463,32 +465,38 @@
                         <p>BDT <span>000</span></p>
                     </div>
                 </div>
-                <div class="p-6">
-                    <span>Passenger Name</span>
-                    <form action="">
-                        <label for="">
-                            <input type="text" placeholder="Enter your name" class="input border-solid border-2 w-full">
-                        </label>
-                    </form>
-                </div>
-                <div class="p-6">
-                    <span>Phone Number</span>
-                    <form action="">
-                        <label for="">
-                            <input type="text" placeholder="Enter your phone number" class="input border-solid border-2 w-full">
-                        </label>
-                    </form>
-                </div>
-                <div class="p-6">
-                    <span>Email ID</span>
-                    <form action="">
-                        <label for="">
-                            <input type="text" placeholder="Enter your email id" class="input border-solid border-2 w-full">
-                        </label>
-                    </form>
-                </div>
-                <div>
-                    <button class="btn btn-wide w-full bg-[#1DD100] text-white text-xl">Next</button>
+                <div class="mt-2 bg-slate-50 rounded-xl">
+                    <div class="p-6">
+                        <span>Passenger Name*</span>
+                        <form action="">
+                            <label for="">
+                                <input type="text" placeholder="Enter your name" class="input border-solid border-2 w-full">
+                            </label>
+                        </form>
+                    </div>
+                    <div class="p-6">
+                        <span>Phone Number*</span>
+                        <form action="">
+                            <label for="">
+                                <input type="text" placeholder="Enter your phone number" class="input border-solid border-2 w-full">
+                            </label>
+                        </form>
+                    </div>
+                    <div class="p-6">
+                        <span>Email ID</span>
+                        <form action="">
+                            <label for="">
+                                <input type="text" placeholder="Enter your email id" class="input border-solid border-2 w-full">
+                            </label>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn btn-wide w-full bg-[#1DD100] text-white text-xl">Next</button>
+                    </div>
+                    <div class="flex justify-around items-center mt-3 underline">
+                        <p>Terms and Conditions</p>
+                        <p>Cancellation Policy</p>
+                    </div>
                 </div>
             </div>
         </div>
